@@ -1,0 +1,105 @@
+{
+  "template_type": "Problem and Solution Prompts",
+  "prompts": [
+    {
+      "id": "PSP1",
+      "prompt": "How can we solve the problem of instability in CYP3A4 during high-temperature biocatalysis?",
+      "guiding_questions": [
+        "What specific factors contribute to the instability of CYP3A4 at high temperatures?",
+        "Why is stability crucial for the performance of CYP3A4 in biocatalysis?",
+        "What are the existing solutions for stabilizing CYP3A4, and what are their limitations?",
+        "What new protein engineering strategies can be proposed to improve the stability of CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP2",
+      "prompt": "How can we enhance the substrate specificity of CYP3A4 in synthetic biology?",
+      "guiding_questions": [
+        "What factors affect substrate specificity in CYP3A4?",
+        "Why is substrate specificity critical for synthetic biology applications?",
+        "What existing techniques have been used to improve the substrate specificity of CYP3A4?",
+        "What novel strategies can be applied to tailor the specificity of CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP3",
+      "prompt": "How can we address the challenge of low expression levels of CYP3A4 in engineered organisms?",
+      "guiding_questions": [
+        "What factors limit the expression of CYP3A4 in engineered organisms?",
+        "Why is achieving high expression levels important for biocatalytic efficiency?",
+        "What approaches have been tried to increase CYP450 expression, and what are their limitations?",
+        "What new methods could be implemented to boost the expression of CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP4",
+      "prompt": "How can we improve the electron transfer efficiency in CYP450 enzyme systems?",
+      "guiding_questions": [
+        "What factors contribute to poor electron transfer efficiency in CYP3A4?",
+        "Why is electron transfer efficiency important for the catalytic activity of CYP3A4?",
+        "What existing approaches have been used to enhance electron transfer, and how effective are they?",
+        "What novel approaches could be applied to optimize electron transfer in CYP450 systems?"
+      ]
+    },
+    {
+      "id": "PSP5",
+      "prompt": "How can we minimize the cofactor dependency of CYP3A4 in biocatalysis?",
+      "guiding_questions": [
+        "What role do cofactors play in CYP450 enzyme catalysis?",
+        "Why is minimizing cofactor dependency important for biocatalytic processes?",
+        "What strategies have been used to reduce cofactor requirements for CYP3A4?",
+        "What innovative solutions could further minimize or eliminate cofactor dependencies in CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP6",
+      "prompt": "How can we increase the thermal stability of CYP3A4 for industrial applications?",
+      "guiding_questions": [
+        "What are the primary causes of thermal instability in CYP3A4?",
+        "Why is thermal stability crucial for the industrial use of CYP3A4?",
+        "What strategies have been explored to improve thermal stability, and what are their limitations?",
+        "What new protein engineering techniques could enhance the thermal stability of CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP7",
+      "prompt": "How can we reduce the aggregation of CYP3A4 during expression in synthetic biology systems?",
+      "guiding_questions": [
+        "What factors contribute to the aggregation of CYP3A4 during expression?",
+        "Why is reducing enzyme aggregation critical for maintaining catalytic efficiency?",
+        "What methods have been used to prevent enzyme aggregation in synthetic biology systems?",
+        "What novel techniques could be proposed to reduce CYP450 enzyme aggregation?"
+      ]
+    },
+    {
+      "id": "PSP8",
+      "prompt": "How can we improve the recyclability of CYP3A4 in biocatalytic reactions?",
+      "guiding_questions": [
+        "What are the challenges in reusing CYP3A4 in continuous biocatalytic processes?",
+        "Why is improving enzyme recyclability important for the efficiency of biocatalysis?",
+        "What existing solutions have been tried to enhance the recyclability of CYP3A4?",
+        "What new approaches could be developed to improve the recyclability of CYP3A4?"
+      ]
+    },
+    {
+      "id": "PSP9",
+      "prompt": "How can we address the issue of CYP450 enzyme toxicity in host organisms during metabolic engineering?",
+      "guiding_questions": [
+        "What factors contribute to the toxicity of CYP3A4 in host organisms?",
+        "Why is addressing enzyme toxicity important for the success of metabolic engineering projects?",
+        "What methods have been used to mitigate CYP450 enzyme toxicity, and what are their limitations?",
+        "What novel strategies could reduce the toxicity of CYP3A4 in engineered organisms?"
+      ]
+    },
+    {
+      "id": "PSP10",
+      "prompt": "How can we enhance the catalytic efficiency of CYP3A4 in synthetic biomanufacturing?",
+      "guiding_questions": [
+        "What factors influence the catalytic efficiency of CYP3A4 in synthetic biomanufacturing?",
+        "Why is catalytic efficiency critical for maximizing the output of biomanufacturing processes?",
+        "What existing methods have been used to enhance the catalytic efficiency of CYP3A4?",
+        "What new approaches could further improve the catalytic efficiency of CYP3A4?"
+      ]
+    }
+  ]
+}

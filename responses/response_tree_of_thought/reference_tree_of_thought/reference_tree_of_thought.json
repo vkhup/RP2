@@ -1,0 +1,55 @@
+{
+  "template_type": "Tree of Thought Template",
+  "prompts": [
+    {
+      "id": "TT1",
+      "prompt": "How can we improve the catalytic efficiency of CYP3A4 for drug metabolism?",
+      "human_response": ""
+    },
+    {
+      "id": "TT2",
+      "prompt": "How can we enhance the stability of CYP3A4 under extreme environmental conditions?",
+      "human_response": ""
+    },
+    {
+      "id": "TT3",
+      "prompt": "How can we optimize the substrate specificity of CYP3A4 for targeted drug synthesis?",
+      "human_response": ""
+    },
+    {
+      "id": "TT4",
+      "prompt": "How can we address CYP450 enzyme degradation during long-term industrial use?",
+      "human_response": ""
+    },
+    {
+      "id": "TT5",
+      "prompt": "How can we enhance CYP450 enzyme activity for biotransformations in green chemistry applications?",
+      "human_response": ""
+    },
+    {
+      "id": "TT6",
+      "prompt": "How can we improve CYP450 enzyme performance in solvent-rich industrial environments?",
+      "human_response": ""
+    },
+    {
+      "id": "TT7",
+      "prompt": "How can we enhance the selectivity of CYP3A4 for complex organic compounds?",
+      "human_response": ""
+    },
+    {
+      "id": "TT8",
+      "prompt": "How can we improve CYP450 enzyme performance in low-temperature industrial processes?",
+      "human_response": ""
+    },
+    {
+      "id": "TT9",
+      "prompt": "How can we address the issue of CYP450 enzyme inhibition in industrial processes?",
+      "human_response": ""
+    },
+    {
+      "id": "TT10",
+      "prompt": "How can we enhance the reusability of CYP3A4 in industrial biocatalysis?",
+      "human_response": ""
+    }
+  ]
+}

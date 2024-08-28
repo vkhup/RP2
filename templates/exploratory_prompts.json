@@ -1,0 +1,95 @@
+{
+  "template_type": "Exploratory Prompts",
+  "prompts": [
+    {
+      "id": "EXP1",
+      "prompt": "What promising mutations could enhance the catalytic versatility of CYP3A4 for novel substrates?",
+      "guiding_questions": [
+        "What are the current limitations in CYP450 enzyme activity with respect to non-native substrates?",
+        "Which known mutations have broadened substrate scope in CYP3A4?",
+        "How can we identify and test new mutations that could expand the catalytic versatility of CYP3A4?"
+      ]
+    },
+    {
+      "id": "EXP2",
+      "prompt": "What novel strategies could improve the electron transfer efficiency in CYP450 enzyme systems?",
+      "guiding_questions": [
+        "What are the key factors affecting electron transfer in CYP3A4?",
+        "How have electron transfer systems been optimized in previous studies?",
+        "What new approaches or technologies could enhance electron transfer and overall catalytic efficiency?"
+      ]
+    },
+    {
+      "id": "EXP3",
+      "prompt": "What are the latest developments in engineering CYP3A4 for improved solubility and reduced aggregation?",
+      "guiding_questions": [
+        "What are the common causes of aggregation in CYP3A4 during expression?",
+        "What strategies have been successful in enhancing enzyme solubility?",
+        "What new techniques could be applied to further reduce aggregation and improve enzyme functionality?"
+      ]
+    },
+    {
+      "id": "EXP4",
+      "prompt": "What novel cofactor engineering approaches could reduce the reliance of CYP3A4 on traditional cofactors?",
+      "guiding_questions": [
+        "What role do traditional cofactors play in the catalytic cycles of CYP3A4?",
+        "What progress has been made in developing alternative cofactor systems or cofactor-free variants?",
+        "How could innovative cofactor engineering improve enzyme efficiency in biocatalytic processes?"
+      ]
+    },
+    {
+      "id": "EXP5",
+      "prompt": "What innovative methods could be used to optimize the thermostability of CYP3A4 for industrial applications?",
+      "guiding_questions": [
+        "What are the main challenges in improving the thermostability of CYP3A4?",
+        "How have existing protein engineering methods addressed thermostability issues?",
+        "What cutting-edge approaches could provide further gains in thermostability for industrial use?"
+      ]
+    },
+    {
+      "id": "EXP6",
+      "prompt": "What are the opportunities for using directed evolution to fine-tune the regioselectivity of CYP3A4?",
+      "guiding_questions": [
+        "What challenges exist in controlling regioselectivity in CYP450-catalyzed reactions?",
+        "How has directed evolution been applied to enhance regioselectivity in similar systems?",
+        "What experimental approaches could yield new insights into optimizing regioselectivity through directed evolution?"
+      ]
+    },
+    {
+      "id": "EXP7",
+      "prompt": "What new insights can be gained from studying the interaction between CYP3A4 and their electron donors in synthetic biology?",
+      "guiding_questions": [
+        "How do electron donors influence the catalytic performance of CYP3A4?",
+        "What recent advances have been made in engineering electron donor systems?",
+        "What research could further improve our understanding of these interactions and their implications for enzyme performance?"
+      ]
+    },
+    {
+      "id": "EXP8",
+      "prompt": "What potential does immobilization have for enhancing the operational stability and reusability of CYP3A4 in biocatalysis?",
+      "guiding_questions": [
+        "What are the main challenges in using immobilized CYP3A4 in continuous processes?",
+        "What materials and techniques have been effective in immobilizing enzymes?",
+        "How could recent advancements in immobilization techniques improve enzyme stability and recyclability?"
+      ]
+    },
+    {
+      "id": "EXP9",
+      "prompt": "What breakthroughs in synthetic biology could allow CYP3A4 to function more efficiently in extreme pH and temperature conditions?",
+      "guiding_questions": [
+        "What are the limitations of CYP3A4 under extreme environmental conditions?",
+        "How have enzymes been engineered to adapt to such conditions in the past?",
+        "What synthetic biology innovations could further enhance the adaptability of CYP3A4?"
+      ]
+    },
+    {
+      "id": "EXP10",
+      "prompt": "What new opportunities exist for integrating machine learning with enzyme engineering to predict and enhance the performance of CYP3A4?",
+      "guiding_questions": [
+        "What role can machine learning play in predicting beneficial mutations in enzyme engineering?",
+        "What types of data are needed to train models for optimizing CYP450 enzyme performance?",
+        "How could machine learning be effectively integrated into enzyme engineering workflows to accelerate the discovery of improved variants?"
+      ]
+    }
+  ]
+}

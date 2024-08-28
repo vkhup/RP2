@@ -1,0 +1,115 @@
+{
+  "template_type": "Comparative Prompts",
+  "prompts": [
+    {
+      "id": "CP1",
+      "prompt": "How does directed evolution compare with rational design in improving the catalytic efficiency of CYP3A4?",
+      "guiding_questions": [
+        "What are the fundamental differences between directed evolution and rational design in the context of CYP3A4 enzyme engineering?",
+        "How does directed evolution impact the catalytic efficiency of CYP3A4 compared to rational design approaches?",
+        "What are the specific advantages and limitations of directed evolution versus rational design for enhancing CYP3A4 efficiency?",
+        "How do these methods affect the diversity of CYP3A4 variants and their specificity towards substrates?",
+        "What factors influence the success of each approach in optimizing CYP3A4 performance in biocatalytic applications?"
+      ]
+    },
+    {
+      "id": "CP2",
+      "prompt": "How do immobilized versus free CYP3A4 perform in continuous biocatalytic systems?",
+      "guiding_questions": [
+        "What are the key functional differences between immobilized CYP3A4 and free CYP3A4 in continuous biocatalytic systems?",
+        "How do immobilized and free forms of CYP3A4 affect factors such as stability, reusability, and reaction rates?",
+        "What are the specific advantages of using immobilized CYP3A4 in continuous biocatalysis compared to free enzymes?",
+        "What limitations are associated with using free CYP3A4 in terms of scalability and process control?",
+        "How do the economic and operational costs of using immobilized CYP3A4 compare with those of free CYP3A4 in continuous systems?"
+      ]
+    },
+    {
+      "id": "CP3",
+      "prompt": "How do bacterial and eukaryotic CYP3A4 compare in terms of expression and functionality in synthetic biology systems?",
+      "guiding_questions": [
+        "What are the structural and functional differences between bacterial and eukaryotic CYP3A4?",
+        "How does the expression of bacterial CYP3A4 compare to eukaryotic CYP3A4 in various host organisms?",
+        "What challenges arise when expressing eukaryotic CYP3A4 in bacterial systems, such as folding or post-translational modifications?",
+        "How do environmental conditions, such as temperature and pH, influence the performance of bacterial versus eukaryotic CYP3A4?",
+        "In which specific applications might one type of CYP3A4 outperform the other?"
+      ]
+    },
+    {
+      "id": "CP4",
+      "prompt": "How do protein engineering techniques such as site-directed mutagenesis compare with machine learning-based approaches for optimizing CYP3A4 performance?",
+      "guiding_questions": [
+        "What are the fundamental principles of site-directed mutagenesis and machine learning in the context of optimizing CYP3A4?",
+        "How does each method contribute to the prediction and optimization of CYP3A4 performance?",
+        "What are the strengths and limitations of using machine learning approaches versus traditional site-directed mutagenesis for CYP3A4 optimization?",
+        "How effective are these methods at guiding enzyme modifications to enhance CYP3A4 performance?",
+        "Can site-directed mutagenesis and machine learning approaches be integrated to improve the efficiency of CYP3A4 engineering?"
+      ]
+    },
+    {
+      "id": "CP5",
+      "prompt": "How does the use of synthetic biology tools like CRISPR compare to traditional genetic engineering methods in the context of CYP3A4 optimization?",
+      "guiding_questions": [
+        "What are the key differences between CRISPR-based approaches and traditional genetic engineering methods for modifying CYP3A4?",
+        "How does CRISPR technology enhance precision and efficiency in engineering CYP3A4 compared to older methods?",
+        "What are the limitations of traditional genetic engineering techniques in optimizing CYP3A4?",
+        "How do the outcomes of CRISPR-based modifications compare with those achieved through conventional methods?",
+        "What are the potential benefits and risks of applying CRISPR technology to CYP3A4 engineering in synthetic biology?"
+      ]
+    },
+    {
+      "id": "CP6",
+      "prompt": "How do computational enzyme design tools compare with high-throughput experimental screening in identifying optimal mutations in CYP3A4?",
+      "guiding_questions": [
+        "What roles do computational enzyme design tools play in predicting beneficial mutations in CYP3A4?",
+        "How do high-throughput experimental screening methods identify optimal CYP3A4 variants with improved performance?",
+        "What are the advantages of computational predictions compared to large-scale experimental screenings for CYP3A4 optimization?",
+        "What limitations are associated with computational models versus experimental data in enzyme engineering?",
+        "How can computational and experimental approaches be combined to optimize CYP3A4 engineering more effectively?"
+      ]
+    },
+    {
+      "id": "CP7",
+      "prompt": "How do protein fusion strategies compare to cofactor engineering in enhancing the electron transfer efficiency of CYP3A4?",
+      "guiding_questions": [
+        "What are the principles behind protein fusion strategies for improving electron transfer in CYP3A4?",
+        "How does cofactor engineering affect electron flow and catalytic performance in CYP3A4 systems?",
+        "What are the benefits of employing protein fusion compared to modifying cofactors for enhancing CYP3A4 performance?",
+        "What challenges are associated with each approach in terms of enzyme stability and scalability?",
+        "How do protein fusion strategies and cofactor engineering compare in various synthetic biology applications?"
+      ]
+    },
+    {
+      "id": "CP8",
+      "prompt": "How do synthetic enzyme cascades compare with natural metabolic pathways in terms of efficiency and flexibility for producing complex molecules?",
+      "guiding_questions": [
+        "What are the key differences between synthetic enzyme cascades and natural metabolic pathways for producing complex molecules?",
+        "How does each approach impact the efficiency of biosynthesis involving CYP3A4?",
+        "What are the advantages of designing synthetic enzyme cascades over mimicking natural pathways?",
+        "What limitations are encountered when using synthetic cascades versus natural pathways for biosynthesis?",
+        "How do these strategies differ in terms of flexibility and adaptability to new substrates or products in enzyme systems?"
+      ]
+    },
+    {
+      "id": "CP9",
+      "prompt": "How does the DBTL pipeline for enzyme optimization compare to conventional iterative engineering cycles in terms of speed and efficiency?",
+      "guiding_questions": [
+        "What are the core elements of the DBTL (Design-Build-Test-Learn) pipeline in synthetic biology for optimizing CYP3A4?",
+        "How do traditional iterative engineering methods approach CYP3A4 optimization compared to the DBTL pipeline?",
+        "How does the structured approach of the DBTL pipeline enhance the speed and efficiency of enzyme design and optimization?",
+        "What challenges are faced when implementing the DBTL pipeline compared to conventional engineering cycles?",
+        "What are the specific advantages of the DBTL pipeline for optimizing complex enzyme systems like CYP3A4?"
+      ]
+    },
+    {
+      "id": "CP10",
+      "prompt": "How do engineered enzymes compare to their natural counterparts in terms of substrate specificity and stability in industrial biocatalysis?",
+      "guiding_questions": [
+        "What are the primary structural and functional differences between engineered and natural CYP3A4 enzymes?",
+        "How does enzyme engineering enhance substrate specificity in industrial biocatalysis compared to natural variants?",
+        "What stability challenges are faced by natural CYP3A4 enzymes compared to engineered versions in industrial settings?",
+        "What trade-offs exist between maximizing specificity and maintaining enzyme robustness in biocatalytic processes?",
+        "How do these factors influence the scalability and efficiency of industrial biocatalytic applications?"
+      ]
+    }
+  ]
+}

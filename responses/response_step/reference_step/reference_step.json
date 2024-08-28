@@ -1,0 +1,55 @@
+{
+  "template_type": "Step by Step Prompts",
+  "prompts": [
+    {
+      "id": "SSP1",
+      "prompt": "What are the key steps in designing CYP3A4 to perform efficiently under high-temperature conditions?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP2",
+      "prompt": "How can CYP3A4 be engineered for improved substrate specificity in synthetic pathways?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP3",
+      "prompt": "What procedures are involved in optimizing the kinetics of CYP3A4 through rational design and experimental validation?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP4",
+      "prompt": "What are the essential steps to integrate CYP3A4 into synthetic biological circuits?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP5",
+      "prompt": "What are the key procedures for directed evolution of CYP3A4 to enhance their industrial utility?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP6",
+      "prompt": "How can we refine CYP3A4 enzyme mutagenesis and screening workflow to maximize enzyme activity?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP7",
+      "prompt": "What steps are necessary to modify CYP450 enzyme cofactors for improved performance in synthetic biology applications?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP8",
+      "prompt": "What are the best practices for optimizing CYP450 enzyme stability and activity in non-aqueous solvents?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP9",
+      "prompt": "How can we streamline the enzyme immobilization process for continuous bioprocessing applications?",
+      "human_response": ""
+    },
+    {
+      "id": "SSP10",
+      "prompt": "What are the key steps to engineer CYP3A4 for effective operation in extreme pH environments?",
+      "human_response": ""
+    }
+  ]
+}

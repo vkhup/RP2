@@ -1,0 +1,55 @@
+{
+  "template_type": "Process Oriented Prompts",
+  "prompts": [
+    {
+      "id": "POP1",
+      "prompt": "How can we improve the process of designing CYP3A4 for efficient biocatalytic reactions in synthetic biology?",
+      "human_response": ""
+    },
+    {
+      "id": "POP2",
+      "prompt": "What methodologies are most effective for optimizing the kinetics of CYP3A4 in synthetic applications?",
+      "human_response": ""
+    },
+    {
+      "id": "POP3",
+      "prompt": "What modifications can enhance the compatibility of CYP3A4 with synthetic hosts in engineered systems?",
+      "human_response": ""
+    },
+    {
+      "id": "POP4",
+      "prompt": "How can the enzyme engineering process be optimized to ensure higher yields of CYP3A4 in biocatalytic reactions?",
+      "human_response": ""
+    },
+    {
+      "id": "POP5",
+      "prompt": "What strategies can be implemented to enhance the stability of CYP3A4 during the scale-up of synthetic biomanufacturing processes?",
+      "human_response": ""
+    },
+    {
+      "id": "POP6",
+      "prompt": "How can the process of conducting multi-enzyme cascade reactions be improved to boost the efficiency of CYP450-based systems?",
+      "human_response": ""
+    },
+    {
+      "id": "POP7",
+      "prompt": "How can enzyme regulation be integrated into synthetic biology design processes for dynamic control of CYP3A4 in metabolic pathways?",
+      "human_response": ""
+    },
+    {
+      "id": "POP8",
+      "prompt": "What are the current best practices for automating the DBTL cycle in the context of CYP450 enzyme engineering?",
+      "human_response": ""
+    },
+    {
+      "id": "POP9",
+      "prompt": "How can the process of integrating CYP3A4 into synthetic genetic circuits be optimized?",
+      "human_response": ""
+    },
+    {
+      "id": "POP10",
+      "prompt": "What are the steps to improve the design and validation process of multi-domain CYP3A4 for industrial biocatalysis?",
+      "human_response": ""
+    }
+  ]
+}

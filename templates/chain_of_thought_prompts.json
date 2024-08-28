@@ -1,0 +1,147 @@
+{
+  "template_type": "Chain of Thought Template",
+  "prompts": [
+    {
+      "id": "CT1",
+      "prompt": "How can we address the challenge of CYP3A4 instability during industrial biocatalysis?",
+      "guiding_questions": [
+        "What specific factors contribute to CYP3A4 instability in industrial biocatalysis, such as temperature, pH, or substrate interactions?",
+        "How does CYP3A4 instability affect the efficiency and yield of biocatalytic processes?",
+        "Which conditions (e.g., temperature, pH) are most detrimental to the stability of CYP3A4, and how can they be mitigated?",
+        "Are there natural variants of CYP3A4 that exhibit enhanced stability under industrial conditions?",
+        "What current methods are used to stabilize CYP3A4, such as chemical additives or engineered variants, and how effective are they?",
+        "What are the limitations of these current stabilization methods in practical applications?",
+        "What novel approaches, such as genetic modifications or protein engineering, could be explored to improve CYP3A4 stability?",
+        "How can these novel approaches be practically implemented in industrial settings to enhance CYP3A4 performance?",
+        "What challenges might arise when scaling these stabilization solutions for industrial biocatalysis?"
+      ]
+    },
+    {
+      "id": "CT2",
+      "prompt": "How can we improve the efficiency of CYP3A4 in drug metabolism and synthesis?",
+      "guiding_questions": [
+        "What are the primary challenges in enhancing CYP3A4 efficiency for drug metabolism and synthesis, such as substrate specificity or cofactor availability?",
+        "Why is improving enzyme efficiency crucial for successful drug metabolism and synthesis processes?",
+        "Which CYP3A4 variants or constructs are crucial for specific drug metabolism and synthesis applications?",
+        "What natural mechanisms or organisms produce highly efficient CYP3A4 for drug-related applications, and how can these be harnessed?",
+        "What current strategies, such as directed evolution or site-specific mutagenesis, are employed to enhance CYP3A4 efficiency, and what are their limitations?",
+        "What innovative techniques could further improve CYP3A4 efficiency, and how feasible are they for practical implementation?",
+        "How could enhanced CYP3A4 efficiency impact drug efficacy, production costs, and overall development timelines?",
+        "What additional research is needed to validate and optimize these efficiency-enhancing techniques for drug synthesis?"
+      ]
+    },
+    {
+      "id": "CT3",
+      "prompt": "How can we optimize CYP3A4 performance for synthetic biology applications?",
+      "guiding_questions": [
+        "What are the specific performance challenges faced by CYP3A4 in synthetic biology applications, such as stability or activity in engineered pathways?",
+        "Why is optimizing CYP3A4 performance critical for synthetic biology and metabolic engineering?",
+        "What roles does CYP3A4 play in synthetic biology and metabolic engineering, and how do performance issues impact these roles?",
+        "What existing methods, such as protein engineering or cofactor optimization, have been used to enhance CYP3A4 performance in synthetic biology?",
+        "What are the limitations of these optimization methods, and how can they be addressed?",
+        "What novel strategies, such as advanced enzyme engineering techniques or novel cofactors, could be employed to further enhance CYP3A4 performance?",
+        "How can these strategies be effectively integrated into synthetic biology frameworks to optimize CYP3A4 functionality?",
+        "What are the potential benefits of optimizing CYP3A4 for synthetic biology applications, and how could they be measured?",
+        "What further research is needed to validate these optimization techniques in synthetic biology settings?"
+      ]
+    },
+    {
+      "id": "CT4",
+      "prompt": "How can we improve CYP3A4 specificity for targeted drug synthesis?",
+      "guiding_questions": [
+        "What are the main challenges associated with improving CYP3A4 specificity in targeted drug synthesis, such as substrate affinity or regioselectivity?",
+        "Why is high specificity important for CYP3A4 used in drug synthesis, and how does it affect drug quality and safety?",
+        "Which CYP3A4 variants are commonly used for selective drug synthesis, and what specificity issues do they encounter?",
+        "What are the current methods for improving CYP3A4 specificity, such as site-directed mutagenesis or substrate engineering, and what limitations do they have?",
+        "What innovative approaches, such as structure-based design or directed evolution, could enhance CYP3A4 specificity further?",
+        "How do modifications to substrate binding or active site residues impact enzyme specificity?",
+        "What impact would improved specificity have on the efficiency and purity of drug synthesis?",
+        "How can these approaches be tested and validated in pharmaceutical development to ensure they meet the required standards?"
+      ]
+    },
+    {
+      "id": "CT5",
+      "prompt": "How can we enhance CYP3A4 stability and activity in extreme pH conditions for industrial applications?",
+      "guiding_questions": [
+        "What specific challenges affect CYP3A4 stability and activity in extreme pH conditions, such as denaturation or loss of activity?",
+        "Why is maintaining enzyme function in extreme pH environments crucial for industrial applications?",
+        "Which CYP3A4 variants are relevant for applications involving extreme pH, and what performance issues do they face?",
+        "What strategies have been used to enhance CYP3A4 stability and activity under extreme pH conditions, and what are their limitations?",
+        "What novel approaches, such as protein engineering or buffer optimization, could be employed to improve stability and activity?",
+        "How do extreme pH conditions impact the structure and function of CYP3A4, and what modifications are needed to counteract these effects?",
+        "What are the potential industrial benefits of enhanced CYP3A4 stability in extreme pH environments?",
+        "What additional research or field trials are required to implement these strategies effectively in industrial processes?"
+      ]
+    },
+    {
+      "id": "CT6",
+      "prompt": "How can we address CYP3A4 aggregation issues in high-salinity environments?",
+      "guiding_questions": [
+        "What specific challenges does high salinity pose for CYP3A4 aggregation, such as altered protein interactions or solubility issues?",
+        "Why is preventing enzyme aggregation critical for maintaining CYP3A4 activity in high-salinity environments?",
+        "Which CYP3A4 variants are most affected by high salinity, and how does this aggregation impact their performance?",
+        "What current methods are used to mitigate enzyme aggregation in high-salinity conditions, such as enzyme stabilizers or modification techniques, and what are their limitations?",
+        "What innovative approaches, such as enzyme immobilization or chemical additives, could be explored to reduce aggregation?",
+        "How do environmental factors like salinity and temperature interact to exacerbate aggregation issues?",
+        "What are the potential impacts of resolving aggregation issues on industrial applications involving CYP3A4?",
+        "How can these solutions be validated and tested in high-salinity environments to ensure their effectiveness?"
+      ]
+    },
+    {
+      "id": "CT7",
+      "prompt": "How can we enhance CYP3A4 performance for biofuel production?",
+      "guiding_questions": [
+        "What are the main challenges in improving CYP3A4 performance for biofuel production, such as substrate specificity or reaction conditions?",
+        "Why is optimizing CYP3A4 performance crucial for efficient and cost-effective biofuel production?",
+        "Which CYP3A4 variants or modifications are essential for biofuel production, and what performance issues do they face?",
+        "What existing techniques, such as directed evolution or cofactor optimization, have been used to enhance CYP3A4 performance in biofuel applications, and what are their limitations?",
+        "What novel approaches, such as enzyme engineering or process optimization, could further improve performance?",
+        "How can these approaches be effectively implemented and tested in biofuel production settings?",
+        "What potential benefits could enhanced CYP3A4 performance bring to biofuel production efficiency and cost reduction?",
+        "What additional research or validation is required to scale these improvements for industrial biofuel production?"
+      ]
+    },
+    {
+      "id": "CT8",
+      "prompt": "How can we optimize CYP3A4 functionality for high-temperature industrial processes?",
+      "guiding_questions": [
+        "What specific challenges does CYP3A4 face in high-temperature environments, such as denaturation or reduced activity?",
+        "Why is optimizing CYP3A4 functionality important for high-temperature industrial processes?",
+        "Which CYP3A4 variants are used in high-temperature applications, and how do they perform under these conditions?",
+        "What existing methods have been employed to enhance stability and activity at high temperatures, and what are their limitations?",
+        "What innovative approaches, such as thermostable mutants or enzyme engineering, could be used to improve functionality?",
+        "How can these approaches be validated and tested in high-temperature industrial processes to ensure effectiveness?",
+        "What impact would improved enzyme functionality have on process efficiency and costs in high-temperature environments?",
+        "What additional research or field trials are needed to effectively implement these solutions in industrial settings?"
+      ]
+    },
+    {
+      "id": "CT9",
+      "prompt": "How can we enhance CYP3A4 efficiency for environmental remediation applications?",
+      "guiding_questions": [
+        "What challenges are associated with enhancing CYP3A4 efficiency for environmental remediation, such as substrate range or reaction conditions?",
+        "Why is high enzyme efficiency crucial for effective environmental cleanup and remediation?",
+        "Which CYP3A4 variants are relevant for environmental remediation tasks, and what efficiency issues do they encounter?",
+        "What existing approaches have been used to improve enzyme efficiency in environmental applications, and what are their limitations?",
+        "What novel techniques, such as enzyme immobilization or improved substrate affinity, could boost efficiency?",
+        "How do environmental factors, such as contaminants or pH, impact CYP3A4 performance in remediation processes?",
+        "What are the potential benefits of enhancing CYP3A4 efficiency for environmental cleanup efforts?",
+        "What further research or validation is needed to implement these efficiency enhancements effectively in environmental remediation?"
+      ]
+    },
+    {
+      "id": "CT10",
+      "prompt": "How can we engineer CYP3A4 for better substrate specificity in pharmaceutical applications?",
+      "guiding_questions": [
+        "What are the main challenges of engineering CYP3A4 for improved substrate specificity in pharmaceutical applications, such as target selectivity or undesired side reactions?",
+        "Why is substrate specificity important in pharmaceutical applications, and how does it impact drug development and production?",
+        "Which CYP3A4 variants are commonly used in pharmaceutical synthesis, and what specificity issues do they face?",
+        "What existing methods, such as rational design or directed evolution, are used to engineer CYP3A4 for better specificity, and what limitations do they have?",
+        "What innovative approaches, such as advanced structural analysis or novel mutagenesis techniques, could further enhance substrate specificity?",
+        "How can these approaches be tested and validated in pharmaceutical contexts to ensure they meet required performance criteria?",
+        "What impact could improved substrate specificity have on drug synthesis, development timelines, and overall drug quality?",
+        "What additional research or optimization is required to effectively implement these engineered CYP3A4 variants in pharmaceutical applications?"
+      ]
+    }
+  ]
+}

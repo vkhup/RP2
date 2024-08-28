@@ -1,0 +1,115 @@
+{
+  "template_type": "Process Oriented Prompts",
+  "prompts": [
+    {
+      "id": "POP1",
+      "prompt": "How can we improve the process of designing CYP3A4 for efficient biocatalytic reactions in synthetic biology?",
+      "guiding_questions": [
+        "What is the current workflow for designing CYP3A4 for biocatalysis?",
+        "What are the main challenges faced in optimizing CYP450 enzyme design?",
+        "How do different design strategies affect the efficiency of CYP3A4?",
+        "What innovative approaches could enhance the design process for CYP3A4?",
+        "How can computational modeling and process automation support better design of CYP3A4?"
+      ]
+    },
+    {
+      "id": "POP2",
+      "prompt": "What methodologies are most effective for optimizing the kinetics of CYP3A4 in synthetic applications?",
+      "guiding_questions": [
+        "What are the standard techniques for optimizing CYP450 enzyme kinetics?",
+        "How does optimizing enzyme kinetics influence the performance of synthetic processes?",
+        "What tools and technologies are used to assess and improve CYP450 kinetics?",
+        "What role does protein engineering play in fine-tuning CYP450 enzyme kinetics?",
+        "How can the optimization process be streamlined to boost enzyme performance in practical applications?"
+      ]
+    },
+    {
+      "id": "POP3",
+      "prompt": "What modifications can enhance the compatibility of CYP3A4 with synthetic hosts in engineered systems?",
+      "guiding_questions": [
+        "What challenges do CYP3A4 face when used in synthetic hosts?",
+        "What types of modifications have been tested to improve enzyme-host compatibility?",
+        "How can synthetic biology techniques be leveraged to enhance this compatibility?",
+        "What are some novel modifications that could further improve the integration of CYP450s in synthetic hosts?",
+        "How do host-related factors, such as metabolic flux and toxicity, affect the performance of CYP3A4?"
+      ]
+    },
+    {
+      "id": "POP4",
+      "prompt": "How can the enzyme engineering process be optimized to ensure higher yields of CYP3A4 in biocatalytic reactions?",
+      "guiding_questions": [
+        "What factors currently influence the yield of CYP3A4 in biocatalysis?",
+        "What existing methods are used to optimize enzyme yield?",
+        "How does enzyme immobilization contribute to improving yield?",
+        "How can protein engineering and synthetic biology approaches be integrated to enhance CYP450 enzyme productivity?",
+        "What are some emerging strategies to further increase enzyme yields in biocatalytic processes?"
+      ]
+    },
+    {
+      "id": "POP5",
+      "prompt": "What strategies can be implemented to enhance the stability of CYP3A4 during the scale-up of synthetic biomanufacturing processes?",
+      "guiding_questions": [
+        "What are the primary challenges in scaling up CYP450 enzyme-driven processes?",
+        "How does enzyme stability change with scale-up, and what are the consequences?",
+        "What stabilization techniques have been successfully applied at an industrial scale?",
+        "How can synthetic biology methods be used to maintain enzyme stability during scale-up?",
+        "What novel approaches could improve the stability of CYP3A4 in large-scale biomanufacturing?"
+      ]
+    },
+    {
+      "id": "POP6",
+      "prompt": "How can the process of conducting multi-enzyme cascade reactions be improved to boost the efficiency of CYP450-based systems?",
+      "guiding_questions": [
+        "What are the main challenges associated with multi-enzyme cascade reactions involving CYP450s?",
+        "How do process conditions influence the efficiency of these cascade reactions?",
+        "What modifications can be made to enhance enzyme interactions and overall efficiency in cascades?",
+        "How can synthetic biology tools be applied to optimize multi-enzyme systems?",
+        "What role does enzyme engineering play in improving the performance of CYP450s in cascade reactions?"
+      ]
+    },
+    {
+      "id": "POP7",
+      "prompt": "How can enzyme regulation be integrated into synthetic biology design processes for dynamic control of CYP3A4 in metabolic pathways?",
+      "guiding_questions": [
+        "What are the challenges of regulating CYP450 enzyme activity in synthetic biology?",
+        "How can enzyme regulation mechanisms influence metabolic pathway outcomes?",
+        "What synthetic biology tools can be used to achieve dynamic control of CYP3A4?",
+        "What is the role of feedback inhibition and other regulatory mechanisms in enzyme control?",
+        "How can protein engineering be used to enhance the regulation of CYP3A4 in dynamic systems?"
+      ]
+    },
+    {
+      "id": "POP8",
+      "prompt": "What are the current best practices for automating the DBTL cycle in the context of CYP450 enzyme engineering?",
+      "guiding_questions": [
+        "What are the key components of the DBTL cycle for enzyme engineering?",
+        "How can automation improve each phase of the DBTL cycle specifically for CYP3A4?",
+        "What tools and technologies are effective for automating the design-build-test phases?",
+        "What are the challenges in fully automating the DBTL cycle for CYP450s?",
+        "How can machine learning and computational approaches enhance the DBTL cycle for CYP450 enzyme engineering?"
+      ]
+    },
+    {
+      "id": "POP9",
+      "prompt": "How can the process of integrating CYP3A4 into synthetic genetic circuits be optimized?",
+      "guiding_questions": [
+        "What are the challenges of integrating CYP3A4 into genetic circuits?",
+        "How do promoters and regulatory elements affect CYP450 enzyme expression in circuits?",
+        "What strategies have been successful in optimizing enzyme integration?",
+        "How can synthetic biology tools improve the integration of CYP450s into genetic circuits?",
+        "What novel approaches could further optimize enzyme integration for synthetic biology applications?"
+      ]
+    },
+    {
+      "id": "POP10",
+      "prompt": "What are the steps to improve the design and validation process of multi-domain CYP3A4 for industrial biocatalysis?",
+      "guiding_questions": [
+        "What are the challenges in designing multi-domain CYP3A4?",
+        "How do interactions between domains influence enzyme performance in biocatalysis?",
+        "What existing methods are used to validate the function of multi-domain CYP3A4?",
+        "How can synthetic biology tools and protein engineering optimize multi-domain enzyme performance?",
+        "What are some novel approaches to enhance the design and validation of multi-domain CYP3A4?"
+      ]
+    }
+  ]
+}

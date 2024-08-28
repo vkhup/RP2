@@ -1,0 +1,115 @@
+{
+  "template_type": "Step by Step Prompts",
+  "prompts": [
+    {
+      "id": "SSP1",
+      "prompt": "What are the key steps in designing CYP3A4 to perform efficiently under high-temperature conditions?",
+      "guiding_questions": [
+        "What criteria should be used to select CYP3A4 for high-temperature applications?",
+        "How can structural analyses be used to identify features that contribute to thermostability in CYP3A4?",
+        "What specific engineering techniques can be applied to enhance the thermostability of CYP3A4?",
+        "How should we conduct experimental tests to evaluate the activity of these engineered enzymes at elevated temperatures?",
+        "What are the steps to validate that the thermostable CYP3A4 are suitable for industrial applications?"
+      ]
+    },
+    {
+      "id": "SSP2",
+      "prompt": "How can CYP3A4 be engineered for improved substrate specificity in synthetic pathways?",
+      "guiding_questions": [
+        "What methods are used to identify key residues in CYP3A4 that influence substrate specificity?",
+        "How can site-directed mutagenesis be employed to alter substrate binding sites in CYP3A4?",
+        "What experimental procedures are used to assess changes in substrate specificity after engineering?",
+        "How can we integrate the engineered CYP3A4 into synthetic pathways for optimal performance?",
+        "What are the steps for validating the function of these enzymes in different host organisms?"
+      ]
+    },
+    {
+      "id": "SSP3",
+      "prompt": "What procedures are involved in optimizing the kinetics of CYP3A4 through rational design and experimental validation?",
+      "guiding_questions": [
+        "What initial steps are necessary to analyze the kinetics of CYP3A4?",
+        "How can rational design principles be applied to enhance the catalytic efficiency of these enzymes?",
+        "What methods are used to screen enzyme variants for improved kinetic properties?",
+        "How should successful enzyme variants be scaled up for further validation?",
+        "What iterative processes are used to refine enzyme kinetics for practical applications?"
+      ]
+    },
+    {
+      "id": "SSP4",
+      "prompt": "What are the essential steps to integrate CYP3A4 into synthetic biological circuits?",
+      "guiding_questions": [
+        "What are the initial design considerations for integrating CYP3A4 into biological circuits?",
+        "How can we ensure that the enzyme activity is properly regulated within the synthetic circuit?",
+        "What testing procedures are used to validate the integration and functionality of CYP3A4 in these circuits?",
+        "How should we optimize the expression and stability of CYP3A4 within the circuits?",
+        "What steps are necessary to scale up the integration process for industrial applications?"
+      ]
+    },
+    {
+      "id": "SSP5",
+      "prompt": "What are the key procedures for directed evolution of CYP3A4 to enhance their industrial utility?",
+      "guiding_questions": [
+        "How do we create an initial library of CYP3A4 enzyme variants for directed evolution?",
+        "What high-throughput screening methods are utilized to identify variants with improved properties?",
+        "How are the selected enzyme variants further evaluated for industrial suitability?",
+        "What steps are involved in optimizing and validating the most promising enzyme variants?",
+        "How can we transition the optimized enzymes from lab-scale to industrial-scale production?"
+      ]
+    },
+    {
+      "id": "SSP6",
+      "prompt": "How can we refine CYP3A4 enzyme mutagenesis and screening workflow to maximize enzyme activity?",
+      "guiding_questions": [
+        "What tools and techniques are used to design and introduce targeted mutations in CYP3A4?",
+        "How can high-throughput screening methods be improved to efficiently identify beneficial mutations?",
+        "What procedures are used to test the impact of these mutations on enzyme activity?",
+        "How can computational tools aid in predicting the effects of mutagenesis on enzyme function?",
+        "What criteria should be used to select the most effective enzyme variants for further development?"
+      ]
+    },
+    {
+      "id": "SSP7",
+      "prompt": "What steps are necessary to modify CYP3A4 enzyme cofactors for improved performance in synthetic biology applications?",
+      "guiding_questions": [
+        "How do we select CYP3A4 that are suitable for cofactor modification studies?",
+        "What engineering techniques are used to alter and optimize enzyme-cofactor interactions?",
+        "How do we test the efficiency of modified cofactors in enzyme-catalyzed reactions?",
+        "What are the main challenges in maintaining cofactor stability and activity during reactions?",
+        "How should we validate the improved performance of enzyme-cofactor systems in synthetic pathways?"
+      ]
+    },
+    {
+      "id": "SSP8",
+      "prompt": "What are the best practices for optimizing CYP3A4 enzyme stability and activity in non-aqueous solvents?",
+      "guiding_questions": [
+        "What criteria are used to select CYP3A4 for non-aqueous solvent applications?",
+        "How can we evaluate enzyme stability and activity in non-aqueous environments?",
+        "What engineering techniques can be applied to enhance enzyme performance in these solvents?",
+        "What testing methods are employed to validate enzyme function in synthetic biology applications with non-aqueous solvents?",
+        "How can we make iterative improvements to optimize enzyme stability and activity in non-aqueous solvents?"
+      ]
+    },
+    {
+      "id": "SSP9",
+      "prompt": "How can we streamline the enzyme immobilization process for continuous bioprocessing applications?",
+      "guiding_questions": [
+        "What factors should be considered when selecting immobilization techniques for CYP3A4?",
+        "How do we assess the efficiency of immobilized enzymes in continuous bioprocessing systems?",
+        "What tools and methods are used to monitor enzyme activity and stability over multiple reaction cycles?",
+        "How can we optimize enzyme immobilization to ensure ease of reuse and recovery?",
+        "What validation methods are used to ensure that enzyme immobilization is scalable for industrial processes?"
+      ]
+    },
+    {
+      "id": "SSP10",
+      "prompt": "What are the key steps to engineer CYP3A4 for effective operation in extreme pH environments?",
+      "guiding_questions": [
+        "What structural characteristics of CYP3A4 are important for adapting to extreme pH conditions?",
+        "How do we select candidate enzymes and modify them to improve performance across various pH ranges?",
+        "What testing protocols are used to evaluate enzyme activity and stability in extreme pH environments?",
+        "How do we ensure the stability of engineered CYP3A4 under these conditions?",
+        "What additional steps are taken to optimize enzyme functionality for practical applications in extreme pH environments?"
+      ]
+    }
+  ]
+}
