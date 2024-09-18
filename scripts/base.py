@@ -65,8 +65,8 @@ def format_template_type(template_type):
 
 def main():
     # Paths to input prompts and output JSON file
-    prompts_file = '/Users/venus/PycharmProjects/enzymes/templates/exploratory_prompts.json'
-    output_dir = '/Users/venus/PycharmProjects/enzymes/responses/response_exploratory/gpt_exploratory'
+    prompts_file = '' # Prompt file path e.g. SSP, CT, PSP etc..
+    output_dir = '' # Output directory path
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
