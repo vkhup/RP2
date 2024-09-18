@@ -64,9 +64,9 @@ def calculate_statistics(data, metrics):
                     stats_list.append(stats)
 
     stats_df = pd.DataFrame(stats_list)
-    stats_df.to_csv('/Users/venus/PycharmProjects/enzymes/statistics/data_output/individual_prompt_statistics.csv',
+    stats_df.to_csv('',
                     index=False)
-    print("Statistics saved to 'individual_prompt_statistics.csv'")
+    print("Statistics saved to ''")
     return stats_df
 
 
@@ -126,8 +126,8 @@ def perform_statistical_tests(data):
 
     # Save all results to a single CSV file
     p_values_df = pd.DataFrame(all_results)
-    p_values_df.to_csv('/Users/venus/PycharmProjects/enzymes/statistics/data_output/individual_p_values.csv', index=False)
-    print("All corrected p-values saved to 'individual_p_values.csv'")
+    p_values_df.to_csv('/', index=False)
+    print("All corrected p-values saved to '")
 
     return all_significant_prompts
 
@@ -169,28 +169,28 @@ def plot_significant_boxplots(data, metrics, fig_title, n_rows, n_cols, start_la
 # Load combined data, perform statistical tests, calculate statistics, and plot
 group_files = {
     'SSP': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/novel_SSP_individual_results.json',
-        'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/step_individual_results.json'
+        'novel': '',
+        'base': ''
     },
     'CEP': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_cause_effect/novel_CEP_individual_results.json',
-        'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_cause_effect/cause_effect_individual_results.json'
+        'novel': '',
+        'base': ''
     },
     'CT': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_chain_of_thought/novel_COT_individual_results.json',
-        'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_chain_of_thought/chain_individual_results.json'
+        'novel': '',
+        'base': ''
     },
     'EXP': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_exploratory/novel_EXP_individual_results.json',
-        'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_exploratory/exploratory_individual_results.json'
+        'novel': '',
+        'base': ''
     },
     'POP': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_process/novel_POP_individual_results.json',
-                'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_process/process_individual_results.json'
+        'novel': '',
+                'base': ''
     },
     'PSP': {
-        'novel': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_problem_solution/novel_PSP_individual_results.json',
-        'base': '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_problem_solution/problem_individual_results.json'
+        'novel': '',
+        'base': ''
     }
 }
 
