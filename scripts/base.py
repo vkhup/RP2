@@ -3,7 +3,7 @@ import json
 from openai import OpenAI
 
 # Initialize the OpenAI client with your API key
-client = OpenAI(api_key="sk-proj-geAAy09XfSVEwsyc8IT3T3BlbkFJKfoxtrRvwxxNCG2vikY7")
+client = OpenAI(api_key="API-KEY")
 
 def query_openai(prompt):
     """
