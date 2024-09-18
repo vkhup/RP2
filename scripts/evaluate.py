@@ -8,14 +8,12 @@ import textstat
 from transformers import BertTokenizer, BertModel
 import numpy as np
 import torch
-
-
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 # Initialize BERT model and tokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-base_raw-uncased')
+model = BertModel.from_pretrained('bert-base_raw-uncased')
 
 def get_sentence_embedding(sentence):
     inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True, max_length=512)
@@ -113,7 +111,7 @@ def evaluate_responses(gpt_json_file_path, human_json_file_path, individual_outp
         cumulative_scores[gpt_id]["flesch_reading_ease_scores"].append(flesch_reading_ease_score)
         cumulative_scores[gpt_id]["num_responses"] += 1
 
-        # Save individual evaluation results
+        # Save base_raw evaluation results
         individual_evaluation_results.append({
             "id": gpt_id,
             "prompt": prompt,
@@ -167,7 +165,7 @@ def evaluate_responses(gpt_json_file_path, human_json_file_path, individual_outp
             "human_response": human_responses_dict[gpt_id]
         })
 
-    # Save individual evaluation results to a JSON file
+    # Save base_raw evaluation results to a JSON file
     with open(individual_output_file_path, 'w') as outfile:
         json.dump(individual_evaluation_results, outfile, indent=4)
 
@@ -180,12 +178,12 @@ def evaluate_responses(gpt_json_file_path, human_json_file_path, individual_outp
 
 def main():
     # Paths to GPT and Human response JSON files
-    gpt_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_problem/gpt_problem/gpt_responses_problem_and_solution_batch_1.json'
-    human_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_problem/reference_problem/reference_problem.json'
+    gpt_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_step/gpt_step/novel_gpt_responses_step_by_step_batch_1.json'
+    human_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_step/reference_step/reference_step.json'
 
     # Output files for evaluation results
-    individual_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_problem_solution/problem_individual_results.json'
-    cumulative_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_problem_solution/problem_cumulative_results.json'
+    individual_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/novel_SSP_individual_results.json'
+    cumulative_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/novel_SSP_cumulative_results.json'
 
     # Perform evaluation
     evaluate_responses(gpt_responses_file, human_responses_file, individual_output_file, cumulative_output_file)

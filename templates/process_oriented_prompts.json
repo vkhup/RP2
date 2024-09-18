@@ -102,13 +102,13 @@
     },
     {
       "id": "POP10",
-      "prompt": "What are the steps to improve the design and validation process of multi-domain CYP3A4 for industrial biocatalysis?",
+      "prompt": "What are the steps to improve the design and validation process of multi-domain CYP450 enzymes for industrial biocatalysis?",
       "guiding_questions": [
-        "What are the challenges in designing multi-domain CYP3A4?",
+        "What are the challenges in designing multi-domain CYP450 enzymes?",
         "How do interactions between domains influence enzyme performance in biocatalysis?",
         "What existing methods are used to validate the function of multi-domain CYP3A4?",
         "How can synthetic biology tools and protein engineering optimize multi-domain enzyme performance?",
-        "What are some novel approaches to enhance the design and validation of multi-domain CYP3A4?"
+        "What are some novel approaches to enhance the design and validation of multi-domain CYP450 enzymes?"
       ]
     }
   ]

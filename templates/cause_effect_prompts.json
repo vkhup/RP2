@@ -80,13 +80,13 @@
     },
     {
       "id": "CEP8",
-      "prompt": "What are the consequences of enzyme degradation on the longevity and performance of CYP3A4 in continuous biocatalytic processes?",
+      "prompt": "What are the consequences of enzyme denaturation on the longevity and performance of CYP3A4 in continuous biocatalytic processes?",
       "guiding_questions": [
-        "What specific factors lead to degradation of CYP3A4 during continuous biocatalytic processes?",
+        "What specific factors lead to denaturation of CYP3A4 during continuous biocatalytic processes?",
         "How does degradation affect the longevity and overall performance of CYP3A4 in these systems?",
-        "What methods can be employed to monitor and prevent CYP3A4 degradation over time?",
-        "How can process conditions be optimized to minimize degradation and extend the lifespan of CYP3A4 in continuous biocatalysis?",
-        "What impact does enzyme degradation have on the efficiency and economic viability of long-term biocatalytic operations using CYP3A4?"
+        "What methods can be employed to monitor and prevent CYP3A4 denaturation over time?",
+        "How can process conditions be optimized to minimize denaturation and extend the lifespan of CYP3A4 in continuous biocatalysis?",
+        "What impact does enzyme denaturation have on the efficiency and economic viability of long-term biocatalytic operations using CYP3A4?"
       ]
     },
     {
