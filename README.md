@@ -105,10 +105,10 @@ statsmodels==0.14.2
 openai==1.42.0  
 scikit-learn==1.5.1  
 
-Key libraries:
+Key libraries:  
 	•	nltk for BLEU score calculations.  
 	•	rouge-score for ROUGE metric assessments.  
-	•	sentence-transformers for generating contextual embeddings.  
+	•	transformers==4.44.2, sentence-transformers for generating contextual embeddings.  
 	•	pandas, numpy, scipy, matplotlib, seaborn, and statsmodels for data manipulation, statistical tests, and visualizations.  
 
 ## Usage
@@ -123,7 +123,11 @@ Visualization of results is handled using seaborn and matplotlib. Results are sa
 Data and Results
 
 •	Evaluation Results: Results of the GPT-4 evaluations are stored in the evaluation_results/ directory. Each subdirectory corresponds to a different prompt category.  
+
 •	Responses: The responses/ directory contains the generated GPT-4 responses (gpt_*), novel prompt strategy responses (novel_gpt_*), and reference responses (reference_*). Each prompt category has its own subdirectory.  
+
 •	Scripts: The scripts/ directory contains Python scripts used to run the evaluations (evaluate.py), generate responses (novel.py, base.py), and perform analyses (box.py, cohen.py, etc.).  
+
 •	Statistical Analysis: Statistical analysis results are stored in the statistics/ directory. This includes p-value corrections and boxplot statistics.  
+
 •	Prompt Templates: The templates/ directory contains JSON files with the prompt templates used for generating GPT-4 responses. These templates are organized by the type of prompt (e.g., cause-effect, chain of thought).  
