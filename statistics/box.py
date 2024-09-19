@@ -64,7 +64,7 @@ def calculate_boxplot_statistics(data, metrics):
     stats_df = pd.DataFrame(stats_list)
     stats_df.to_csv('/',
                     index=False)
-    print("Boxplot statistics saved to ''")
+    print("Boxplot statistics saved to 'statistics/data_output/group_boxplot_statistics'")
     return stats_df
 
 
@@ -114,9 +114,9 @@ def perform_statistical_tests(data):
         p_values_df.loc[p_values_df['Metric'] == metric, 'significant'] = corrected[0]
 
     # Save the corrected p-values to a CSV file
-    p_values_df.to_csv('/',
+    p_values_df.to_csv('/statistics/data_output/p_values_corrected.csv',
                        index=False)
-    print("P-values with corrections saved to ''")
+    print("P-values with corrections saved to 'p_values_corrected.csv'")
     return p_values_df
 
 
@@ -158,28 +158,28 @@ def plot_significant_groups(data, metrics, p_values_df, fig_title, n_rows, n_col
 # Load combined data, perform statistical tests, calculate statistics, and plot
 group_files = {
     'SSP': {
-        'novel': '',
-        'base': ''
+        'novel': 'path/to/novel_SSP_file.json',
+        'base': 'path/to/base_SSP_file.json'
     },
     'CEP': {
-        'novel': '',
-        'base': ''
+        'novel': 'path/to/novel_CEP_file.json',
+        'base': 'path/to/base_CEP_file.json'
     },
     'CT': {
-        'novel': '',
-        'base': ''
+        'novel': 'path/to/novel_CT_file.json',
+        'base': 'path/to/base_CT_file.json'
     },
     'EXP': {
-        'novel': '',
-        'base': ''
+        'novel': 'path/to/novel_EXP_file.json',
+        'base': 'path/to/base_EXP_file.json'
     },
     'POP': {
-        'novel': '',
-                'base': ''
+        'novel': 'path/to/novel_POP_file.json',
+        'base': 'path/to/base_POP_file.json'
     },
     'PSP': {
-        'novel': '',
-        'base': ''
+        'novel': 'path/to/novel_PSP_file.json',
+        'base': 'path/to/base_PSP_file.json'
     }
 }
 
