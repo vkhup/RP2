@@ -62,9 +62,9 @@ def calculate_boxplot_statistics(data, metrics):
                     stats_list.append(stats)
 
     stats_df = pd.DataFrame(stats_list)
-    stats_df.to_csv('/',
+    stats_df.to_csv('/statistics/data_output/group_boxplot_statistics',
                     index=False)
-    print("Boxplot statistics saved to 'statistics/data_output/group_boxplot_statistics'")
+    print("Boxplot statistics saved to 'group_boxplot_statistics.csv'")
     return stats_df
 
 
