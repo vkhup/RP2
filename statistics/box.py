@@ -150,7 +150,7 @@ def plot_significant_groups(data, metrics, p_values_df, fig_title, n_rows, n_col
 
     plt.suptitle(fig_title, fontsize=20, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
-    fig.savefig(f"/{fig_title}.png", format='png', dpi=450,
+    fig.savefig(f"/statistics/{fig_title}.png", format='png', dpi=450,
                 bbox_inches='tight')
     # plt.show()
 
