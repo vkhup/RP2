@@ -65,8 +65,8 @@ def format_template_type(template_type):
 
 def main():
     # Paths to input prompts and output JSON file
-    prompts_file = '' # Prompt file path e.g. SSP, CT, PSP etc..
-    output_dir = '' # Output directory path
+    prompts_file = f'templates/{prompt_type}_prompts.json'
+    output_dir = f'responses/response_{prompt_type}/gpt_{prompt_type}'
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
