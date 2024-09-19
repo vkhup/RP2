@@ -131,3 +131,6 @@ Data and Results
 •	Statistical Analysis: Statistical analysis results are stored in the statistics/ directory. This includes p-value corrections and boxplot statistics.  
 
 •	Prompt Templates: The templates/ directory contains JSON files with the prompt templates used for generating GPT-4 responses. These templates are organized by the type of prompt (e.g., cause-effect, chain of thought).  
+
+## Citations  
+All citations used in the creation of the references responses for the prompts are stored in the **Citation** file
