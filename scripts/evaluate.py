@@ -178,13 +178,12 @@ def evaluate_responses(gpt_json_file_path, human_json_file_path, individual_outp
 
 def main():
     # Paths to GPT and Human response JSON files
-    gpt_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_step/gpt_step/novel_gpt_responses_step_by_step_batch_1.json'
-    human_responses_file = '/Users/venus/PycharmProjects/enzymes/responses/response_step/reference_step/reference_step.json'
+    gpt_responses_file = f'responses/response_{prompt_type}/gpt_step/novel_gpt_responses_{propmt_type}_batch_1.json'
+    human_responses_file = f'responses/response_{prompt_type}/reference_{prompt_type}/reference_{prompt_type}.json'
 
     # Output files for evaluation results
-    individual_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/novel_SSP_individual_results.json'
-    cumulative_output_file = '/Users/venus/PycharmProjects/enzymes/evaluation_results/results_step/novel_SSP_cumulative_results.json'
-
+    individual_output_file = f'evaluation_results/results_{prompt_type}/novel_{prompt_prefix}_individual_results.json'
+    cumulative_output_file = f'evaluation_results/results_{prompt_type}/novel_{prompt_prefix}_cumulative_results.json'
     # Perform evaluation
     evaluate_responses(gpt_responses_file, human_responses_file, individual_output_file, cumulative_output_file)
 
