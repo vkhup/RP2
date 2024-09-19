@@ -1,142 +1,128 @@
 # RP2 GPT-4 Prompt Analysis for Synthetic Biology
+
 This repository contains scripts, data, and results for analyzing the performance of GPT-4 on various prompt categories within synthetic biology. The focus is on understanding how different prompt strategies affect the outputs, particularly in the context of enzyme engineering and synthetic biology.
 
+## Repository Structure
 
-Repository Structure
 The repository is structured as follows:
 
-evaluation_results/
-├── results_cause_effect/
-├── results_chain_of_thought/
-├── results_exploratory/
-├── results_problem_solution/
-├── results_process/
-├── results_step/
-responses/
-├── response_cause_effect/
-│   ├── gpt_cause_effect/
-│   │   ├── gpt_responses_cause_and_effect_batch_1.json
-│   │   ├── novel_gpt_responses_cause_and_effect_batch_1.json
-│   ├── reference_cause_effect/
-│   │   └── reference_cause_effect.json
-├── response_chain_of_thought/
-│   ├── gpt_chain_of_thought/
-│   │   ├── gpt_responses_chain_of_thought_batch_1.json
-│   │   ├── novel_gpt_responses_chain_of_thought_template_batch_1.json
-│   ├── reference_chain_of_thought/
-│   │   └── reference_chain_of_thought.json
-├── response_exploratory/
-│   ├── gpt_exploratory/
-│   │   ├── gpt_responses_exploratory_batch_1.json
-│   │   ├── novel_gpt_responses_exploratory_batch_1.json
-│   ├── reference_exploratory/
-│   │   └── reference_exploratory.json
-├── response_problem/
-│   ├── gpt_problem/
-│   ├── reference_problem/
-│   │   └── reference_problem.json
-├── response_process/
-│   ├── gpt_process/
-│   │   ├── gpt_responses_process_oriented_batch_1.json
-│   │   ├── novel_gpt_responses_process_oriented_batch_1.json
-│   ├── reference_process/
-│   │   └── reference_process.json
-├── response_step/
-│   ├── gpt_step/
-│   │   ├── gpt_responses_step_by_step_batch_1.json
-│   │   ├── novel_gpt_responses_step_by_step_batch_1.json
-│   ├── reference_step/
-│   │   └── reference_step.json
-scripts/
-├── base.py
-├── evaluate.py
-├── novel.py
-statistics/
-├── data_output/
-│   ├── group_boxplot_statistics.csv
-│   ├── p_values_corrected.csv
-├── box.py
-├── cohen.py
-├── cohens_group.py
-├── indv_box.py
-templates/
-├── cause_effect_prompts.json
-├── chain_of_thought_prompts.json
-├── comparative_prompts.json
-├── conditional_prompts.json
-├── exploratory_prompts.json
-├── problem_solution_prompts.json
-├── process_oriented_prompts.json
-├── step_by_step_prompts.json
-├── tree_of_thought.json
-README.md
+- **evaluation_results/**
+  - **results_cause_effect/**
+  - **results_chain_of_thought/**
+  - **results_exploratory/**
+  - **results_problem_solution/**
+  - **results_process/**
+  - **results_step/**
+- **responses/**
+  - **response_cause_effect/**
+    - **gpt_cause_effect/**
+      - `gpt_responses_cause_and_effect_batch_1.json`
+      - `novel_gpt_responses_cause_and_effect_batch_1.json`
+    - **reference_cause_effect/**
+      - `reference_cause_effect.json`
+  - **response_chain_of_thought/**
+    - **gpt_chain_of_thought/**
+      - `gpt_responses_chain_of_thought_batch_1.json`
+      - `novel_gpt_responses_chain_of_thought_template_batch_1.json`
+    - **reference_chain_of_thought/**
+      - `reference_chain_of_thought.json`
+  - **response_exploratory/**
+    - **gpt_exploratory/**
+      - `gpt_responses_exploratory_batch_1.json`
+      - `novel_gpt_responses_exploratory_batch_1.json`
+    - **reference_exploratory/**
+      - `reference_exploratory.json`
+  - **response_problem/**
+    - **gpt_problem/**
+    - **reference_problem/**
+      - `reference_problem.json`
+  - **response_process/**
+    - **gpt_process/**
+      - `gpt_responses_process_oriented_batch_1.json`
+      - `novel_gpt_responses_process_oriented_batch_1.json`
+    - **reference_process/**
+      - `reference_process.json`
+  - **response_step/**
+    - **gpt_step/**
+      - `gpt_responses_step_by_step_batch_1.json`
+      - `novel_gpt_responses_step_by_step_batch_1.json`
+    - **reference_step/**
+      - `reference_step.json`
+- **scripts/**
+  - `base.py`
+  - `evaluate.py`
+  - `novel.py`
+- **statistics/**
+  - **data_output/**
+    - `group_boxplot_statistics.csv`
+    - `p_values_corrected.csv`
+  - `box.py`
+  - `cohen.py`
+  - `cohens_group.py`
+  - `indv_box.py`
+- **templates/**
+  - `cause_effect_prompts.json`
+  - `chain_of_thought_prompts.json`
+  - `comparative_prompts.json`
+  - `conditional_prompts.json`
+  - `exploratory_prompts.json`
+  - `problem_solution_prompts.json`
+  - `process_oriented_prompts.json`
+  - `step_by_step_prompts.json`
+  - `tree_of_thought.json`
+- **README.md**
 
-Key Directories:
+## Key Directories:
 
-•	evaluation_results/: Contains results from evaluating the GPT-4 outputs for each prompt group. Each subdirectory corresponds to a different prompt category (e.g., cause-effect, exploratory).
-•	responses/: Stores the generated responses and corresponding reference responses. Each subdirectory is organized by prompt category, containing:
-  •	gpt_*: Generated responses from GPT-4.
-  •	novel_gpt_*: Responses generated by a novel prompt strategy.
-  •	reference_*: Reference responses used for evaluation.
-•	scripts/: Python scripts used to generate, evaluate, and analyze the GPT-4 responses.
-•	statistics/: Scripts and data outputs for statistical analysis, including significance testing and effect size calculations.
-•	templates/: JSON files containing the prompt templates used for generating the GPT-4 responses.
+- **evaluation_results/**: Contains results from evaluating the GPT-4 outputs for each prompt group. Each subdirectory corresponds to a different prompt category (e.g., cause-effect, exploratory).
+- **responses/**: Stores the generated responses and corresponding reference responses. Each subdirectory is organized by prompt category, containing:
+  - **gpt_***: Generated responses from GPT-4.
+  - **novel_gpt_***: Responses generated by a novel prompt strategy.
+  - **reference_***: Reference responses used for evaluation.
+- **scripts/**: Python scripts used to generate, evaluate, and analyze the GPT-4 responses.
+- **statistics/**: Scripts and data outputs for statistical analysis, including significance testing and effect size calculations.
+- **templates/**: JSON files containing the prompt templates used for generating the GPT-4 responses.
 
-Setup and Installation
+## Setup and Installation
 
-1.	Clone the Repository:
-git clone https://github.com/vkhup/RP2.git
-cd RP2
-
+1. ** Clone the Repository:**
+   ```sh
+   git clone https://github.com/vkhup/RP2.git
+   cd RP2
+   
 2.	Install Required Libraries:
 Ensure you have Python 3.12 installed. Install the required Python packages:
-
-nltk==3.9.1
-rouge_score==0.1.2
-sentence-transformers==2.2.2  # Assuming you're using this for BERT embeddings
-pandas==1.4.4
-numpy==1.26.4
-scipy==1.14.1
-matplotlib==3.9.2
-seaborn==0.13.2
-statsmodels==0.14.2
-openai==1.42.0
-scikit-learn==1.5.1
+nltk==3.9.1  
+rouge_score==0.1.2  
+sentence-transformers==2.2.2  
+pandas==1.4.4  
+numpy==1.26.4  
+scipy==1.14.1  
+matplotlib==3.9.2  
+seaborn==0.13.2  
+statsmodels==0.14.2  
+openai==1.42.0  
+scikit-learn==1.5.1  
 
 Key libraries:
-	•	nltk for BLEU score calculations.
-	•	rouge-score for ROUGE metric assessments.
-	•	sentence-transformers for generating contextual embeddings.
-	•	pandas, numpy, scipy, matplotlib, seaborn, and statsmodels for data manipulation, statistical tests, and visualizations.
+	•	nltk for BLEU score calculations.  
+	•	rouge-score for ROUGE metric assessments.  
+	•	sentence-transformers for generating contextual embeddings.  
+	•	pandas, numpy, scipy, matplotlib, seaborn, and statsmodels for data manipulation, statistical tests, and visualizations.  
 
-Usage
+## Usage
 
-  1.	Running Evaluations:
+1.	Running Evaluations:
 Use the evaluate.py script to generate and evaluate GPT-4 responses based on the prompts in the templates/ directory.
-	2.	Statistical Analysis:
+2.	Statistical Analysis:
 The statistics/ directory contains scripts for analyzing the results, including calculating boxplot statistics and performing significance tests.
-	3.	Visualization:
+3.	Visualization:
 Visualization of results is handled using seaborn and matplotlib. Results are saved in the statistics/data_output/ directory.
 
 Data and Results
 
-Evaluation Results
-
-Results of the GPT-4 evaluations are stored in the evaluation_results/ directory. Each subdirectory corresponds to a different prompt category.
-
-Responses
-
-The responses/ directory contains the generated GPT-4 responses (gpt_*), novel prompt strategy responses (novel_gpt_*), and reference responses (reference_*). Each prompt category has its own subdirectory.
-
-Scripts
-
-The scripts/ directory contains Python scripts used to run the evaluations (evaluate.py), generate responses (novel.py, base.py), and perform analyses (box.py, cohen.py, etc.).
-
-Statistical Analysis
-
-Statistical analysis results are stored in the statistics/ directory. This includes p-value corrections and boxplot statistics.
-
-Prompt Templates
-
-The templates/ directory contains JSON files with the prompt templates used for generating GPT-4 responses. These templates are organized by the type of prompt (e.g., cause-effect, chain of thought).
-
+•	Evaluation Results: Results of the GPT-4 evaluations are stored in the evaluation_results/ directory. Each subdirectory corresponds to a different prompt category.  
+•	Responses: The responses/ directory contains the generated GPT-4 responses (gpt_*), novel prompt strategy responses (novel_gpt_*), and reference responses (reference_*). Each prompt category has its own subdirectory.  
+•	Scripts: The scripts/ directory contains Python scripts used to run the evaluations (evaluate.py), generate responses (novel.py, base.py), and perform analyses (box.py, cohen.py, etc.).  
+•	Statistical Analysis: Statistical analysis results are stored in the statistics/ directory. This includes p-value corrections and boxplot statistics.  
+•	Prompt Templates: The templates/ directory contains JSON files with the prompt templates used for generating GPT-4 responses. These templates are organized by the type of prompt (e.g., cause-effect, chain of thought).  
