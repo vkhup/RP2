@@ -64,9 +64,9 @@ def calculate_statistics(data, metrics):
                     stats_list.append(stats)
 
     stats_df = pd.DataFrame(stats_list)
-    stats_df.to_csv('/statistics/data_output/',
+    stats_df.to_csv('/statistics/data_output/individual_prompt_statistics.csv',
                     index=False)
-    print("Statistics saved to 'statistics/data_output/'individual_prompt_statistics.csv")
+    print("Statistics saved to 'individual_prompt_statistics.csv'")
     return stats_df
 
 
@@ -126,8 +126,8 @@ def perform_statistical_tests(data):
 
     # Save all results to a single CSV file
     p_values_df = pd.DataFrame(all_results)
-    p_values_df.to_csv('/', index=False)
-    print("All corrected p-values saved to '")
+    p_values_df.to_csv('//statistics/data_output/individual_p_values.csv', index=False)
+    print("All corrected p-values saved to 'individual_p_values.csv")
 
     return all_significant_prompts
 
@@ -161,9 +161,9 @@ def plot_significant_boxplots(data, metrics, fig_title, n_rows, n_cols, start_la
 
     plt.suptitle(fig_title, fontsize=18, y=0.98)
     fig.tight_layout(rect=[0, 0, 1, 0.95])
-    fig.savefig(f"/Users/venus/PycharmProjects/enzymes/statistics/Graphs/{fig_title}.png", format='png', dpi=450,
+    fig.savefig(f"/statistics/Graphs/{fig_title}.png", format='png', dpi=450,
                 bbox_inches='tight')
-    print(f"Plot saved to /Users/venus/PycharmProjects/enzymes/statistics/Graphs/{fig_title}.png")
+    print(f"Plot saved to /statistics/Graphs/{fig_title}.png")
 
 
 # Load combined data, perform statistical tests, calculate statistics, and plot
