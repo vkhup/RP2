@@ -1,91 +1,99 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load the data
-file_path = '/statistics/data_output/individual_prompt_statistics.csv'
-data_significant_prompts = pd.read_csv(file_path)
+# Load the datasets
+file_path_stats = '/statistics/data_output/individual_prompt_statistics.csv'
+file_path_tests = '/statistics/data_output/individual_p_values.csv'
 
-# Extract the prompt type (e.g., SSP, CEP, EXP) from the 'Group 1' column
-data_significant_prompts['Prompt_Type'] = data_significant_prompts['Group'].str.extract(r'(\D+)', expand=False)
+data_stats = pd.read_csv(file_path_stats)
+data_tests = pd.read_csv(file_path_tests)
 
-# Clean up 'Group 1' to get the base prompt names (e.g., SS5 instead of SS5_novel)
-data_significant_prompts['Prompt'] = data_significant_prompts['Group'].str.replace('_novel', '').str.replace('_base', '')
+# Filter data_tests to only include rows where 'Significant' is True
+data_tests_significant = data_tests[data_tests['Significant'] == True][['Prompt ID', 'Metric', 'Test Used']]
 
-# Function to calculate Cohen's d (effect size)
-def calculate_cohens_d(row):
-    # Pooled standard deviation
-    pooled_sd = ((row['Novel Std Dev'] ** 2 * (10 - 1)) + (row['Base Std Dev'] ** 2 * (10 - 1))) / (10 + 10 - 2)
-    pooled_sd = pooled_sd ** 0.5
+# Separate the Novel and Base data based on the Condition column
+novel_data = data_stats[data_stats['Condition'] == 'Novel']
+base_data = data_stats[data_stats['Condition'] == 'Base']
 
-    # Cohen's d
-    cohen_d = (row['Novel Mean'] - row['Base Mean']) / pooled_sd
-    return cohen_d
+# Merge the Novel and Base data on 'Prompt ID' and 'Metric'
+merged_data = pd.merge(novel_data, base_data, on=['Prompt ID', 'Metric'], suffixes=('_novel', '_base'))
 
+# Merge the test data (from data_tests_significant) with the merged novel and base data
+data_merged = pd.merge(merged_data, data_tests_significant, on=['Prompt ID', 'Metric'], how='inner')  # 'inner' to keep only significant results
 
-# Apply the Cohen's d calculation to each row
-data_significant_prompts['Cohens_d'] = data_significant_prompts.apply(calculate_cohens_d, axis=1)
+# Add a column for the type of effect size calculation
+def calculate_effect_size(row):
+    if row['Test Used'] == 't-test':
+        # Cohen's d calculation for parametric data
+        pooled_sd = ((row['Std Dev_novel'] ** 2 * (10 - 1)) + (row['Std Dev_base'] ** 2 * (10 - 1))) / (10 + 10 - 2)
+        pooled_sd = pooled_sd ** 0.5
+        cohen_d = (row['Mean_novel'] - row['Mean_base']) / pooled_sd
+        return cohen_d
+    elif row['Test Used'] == 'Wilcoxon':
+        # Cliff's delta calculation for non-parametric data
+        cliff_delta = (row['Median_novel'] - row['Median_base']) / (row['Max_novel'] - row['Min_base'])
+        return cliff_delta
+    else:
+        return None
 
-# Function to plot effect sizes with custom subplot titles and figure title
-def plot_effect_size_with_custom_titles(data, metrics, custom_titles, fig_title, n_rows, n_cols, start_label_index):
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(16, 8 * n_rows), dpi=300)  # Increase figure size based on rows
-    axes = axes.flatten() if n_rows * n_cols > 1 else [axes]  # Flatten axes if multiple, otherwise make a list
+# Apply the effect size calculation based on the test used
+data_merged['Effect_Size'] = data_merged.apply(calculate_effect_size, axis=1)
 
-    # Create labels starting from the provided index (A, B, C...)
-    subplot_labels = [chr(i) for i in range(65 + start_label_index, 65 + start_label_index + len(metrics))]
+# Create a single column for the effect size (without suffixes in the plot)
+effect_size_data = data_merged[['Prompt ID', 'Metric', 'Effect_Size', 'Test Used']]
 
-    # Loop through each metric and create a subplot for each
-    for i, (metric_name, custom_title) in enumerate(metrics):
-        ax = axes[i]  # Current axis
-        metric_data = data[data['Metric'] == metric_name]
-        ax.set_title(f"{subplot_labels[i]}. {custom_title}", loc='left')  # Add subplot label (A, B, C...)
+# Separate the parametric and non-parametric data
+parametric_data = effect_size_data[effect_size_data['Test Used'] == 't-test']
+non_parametric_data = effect_size_data[effect_size_data['Test Used'] == 'Wilcoxon']
 
-        # Filter data for the current metric and plot effect sizes
-        prompt_types = metric_data['Prompt_Type'].unique()
+# Print available metrics to debug
+print(f"Available metrics for parametric data: {parametric_data['Metric'].unique()}")
+print(f"Available metrics for non-parametric data: {non_parametric_data['Metric'].unique()}")
 
-        for prompt_type in prompt_types:
-            # Filter data for current prompt type and plot
-            prompt_data = metric_data[metric_data['Prompt_Type'] == prompt_type]
+# Update metrics_to_plot to reflect actual metric names in the dataset
+metrics_to_plot = ['bleu_score', 'rouge_1', 'rouge_2', 'rouge_L', 'context_similarity']
 
-            # Plot bar chart for each prompt type
-            bars = ax.bar(prompt_data['Prompt'], prompt_data['Cohens_d'], color='skyblue')
-            ax.axhline(0, color='black', linewidth=0.5)
-            ax.set_xlabel("Prompt")
+# Function to plot effect sizes for parametric or non-parametric data
+def plot_effect_sizes(data, metrics, title, fig_name):
+    fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+    axes = axes.flatten()
 
-            # Annotate the bars with Cohen's d values dynamically above or below the bars
-            for bar in bars:
-                yval = bar.get_height()
-                if yval > 0:
-                    ax.text(bar.get_x() + bar.get_width() / 2, yval - 0.02, f'{yval:.2f}', ha='center', va='top')
-                else:
-                    ax.text(bar.get_x() + bar.get_width() / 2, yval + 0.02, f'{yval:.2f}', ha='center', va='bottom')
+    for i, metric in enumerate(metrics):
+        metric_data = data[data['Metric'] == metric]
+        if metric_data.empty:
+            print(f"No data to plot for {metric}")
+            continue  # Skip this metric if no data
 
-        # Rotate x labels for better readability
+        print(f"Data found for {metric}: {len(metric_data)} rows")  # Debugging: print the number of rows
+        ax = axes[i]
+        ax.bar(metric_data['Prompt ID'], metric_data['Effect_Size'], color='skyblue')
+        ax.axhline(0, color='black', linewidth=0.5)
+        ax.set_xlabel("Prompt ID")
+        ax.set_ylabel("Effect Size")
+        ax.set_title(f"Effect Size for {metric}", fontsize=14)
         ax.tick_params(axis='x', rotation=45)
 
-    # Set y-axis label on the leftmost plot
-    axes[0].set_ylabel("Cohen's d")
+        # Annotate the bars with effect size values
+        for bar in ax.patches:
+            yval = bar.get_height()
+            if yval > 0:
+                ax.text(bar.get_x() + bar.get_width() / 2, yval - 0.02, f'{yval:.2f}', ha='center', va='top')
+            else:
+                ax.text(bar.get_x() + bar.get_width() / 2, yval + 0.02, f'{yval:.2f}', ha='center', va='bottom')
 
-    # Adjust layout to avoid overlap and leave space for the figure title
-    plt.subplots_adjust(top=0.95)  # Adjust this value to control the title space
-    fig.suptitle(fig_title, fontsize=16, y=0.98)
-    fig.savefig(f"{fig_title}.png", format='png', dpi=300, bbox_inches='tight')
+    # Remove any extra axes if metrics are less than 6
+    for j in range(i + 1, len(axes)):
+        fig.delaxes(axes[j])
+
+    fig.suptitle(title, fontsize=16)
+    fig.tight_layout(rect=[0, 0, 1, 0.96])
+    fig.savefig(f'{fig_name}.png', format='png', dpi=300)
     plt.show()
 
+# Plot parametric data in 2 figures (each with a 2x3 layout)
+plot_effect_sizes(parametric_data, metrics_to_plot[:3], title="Effect Sizes for Parametric Data (Part 1)", fig_name="parametric_part_1")
+plot_effect_sizes(parametric_data, metrics_to_plot[3:], title="Effect Sizes for Parametric Data (Part 2)", fig_name="parametric_part_2")
 
-# Define the metrics and their custom subplot titles
-metrics_1 = [
-    ('bleu_scores', 'BLEU Scores Comparison: Novel vs. Base'),
-    ('rouge_1_scores', 'ROUGE-1 Scores Comparison: Novel vs. Base'),
-    ('rouge_2_scores', 'ROUGE-2 Scores Comparison: Novel vs. Base')
-]
-
-metrics_2 = [
-    ('rouge_l_scores', 'ROUGE-L Scores Comparison: Novel vs. Base'),
-    ('context_similarity_scores', 'Context Similarity Scores: Novel vs. Base')
-]
-
-# Plot the first figure with custom titles and labels (A, B, C)
-plot_effect_size_with_custom_titles(data_significant_prompts, metrics_1,   [title for _, title in metrics_1],   fig_title="Effect Size Comparison Metrics Across Individual Prompts  (Part 1)", n_rows=3, n_cols=1, start_label_index=0)
-
-# Plot the second figure with custom titles and labels (D, E)
-plot_effect_size_with_custom_titles(data_significant_prompts, metrics_2,  [title for _, title in metrics_2], fig_title="Effect Size Comparison Metrics Across Individual Prompts (Part 2)",  n_rows=2, n_cols=1, start_label_index=3)
+# Plot non-parametric data in 2 figures (each with a 2x3 layout)
+plot_effect_sizes(non_parametric_data, metrics_to_plot[:3], title="Effect Sizes for Non-Parametric Data (Part 1)", fig_name="non_parametric_part_1")
+plot_effect_sizes(non_parametric_data, metrics_to_plot[3:], title="Effect Sizes for Non-Parametric Data (Part 2)", fig_name="non_parametric_part_2")
