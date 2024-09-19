@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data
-file_path = '/statistics/data_output/cumulative_novel_vs_base_statistical_results.csv'
+file_path = '/statistics/data_output/individual_prompt_statistics.csv'
 data_significant_prompts = pd.read_csv(file_path)
 
 # Extract the prompt type (e.g., SSP, CEP, EXP) from the 'Group 1' column
@@ -67,12 +67,8 @@ def plot_effect_size_with_custom_titles(data, metrics, custom_titles, fig_title,
 
     # Adjust layout to avoid overlap and leave space for the figure title
     plt.subplots_adjust(top=0.95)  # Adjust this value to control the title space
-
-    # Add the figure title after layout adjustment
     fig.suptitle(fig_title, fontsize=16, y=0.98)
-
     fig.savefig(f"{fig_title}.png", format='png', dpi=300, bbox_inches='tight')
-
     plt.show()
 
 
