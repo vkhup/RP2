@@ -64,9 +64,9 @@ def calculate_statistics(data, metrics):
                     stats_list.append(stats)
 
     stats_df = pd.DataFrame(stats_list)
-    stats_df.to_csv('',
+    stats_df.to_csv('/statistics/data_output/',
                     index=False)
-    print("Statistics saved to ''")
+    print("Statistics saved to 'statistics/data_output/'individual_prompt_statistics.csv")
     return stats_df
 
 
